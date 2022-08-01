@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(173, 173, 169);
+}
+
+#heading {
+    color: rgb(68, 68, 68);
+    background-color: #f9d49c;
+    width: 100%;
+    font-size: x-large;
+    padding-top: 7px;
+    padding-bottom: 17px;
+}
+
+#footer {
+    color: rgb(68, 68, 68);
+    background-color: #f9d49c;
+    width: 100%;
+    font-size: large;
+    padding-top: 5px;
+}
+
+html,
+body {
+    display: grid;
+    text-align: center;
+    place-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;
+    margin-left: -290px;
+    margin-top: 20px;
+
+}
+
+#side-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin-top: 20px;
+}
+
+#color-picker {
+    width: 20vh;
+    height: 20vh;
+    margin-bottom: 20px;
+    background-color: rbg(66, 66, 66);
+}
+
+.button {
+    width: 200px;
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 0px;
+}
+
+.active {
+    background-color: #f9d49c;
+}
+
+#container {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+#allBoxes {
+    display: grid;
+    grid-template-columns: repeat(1, 50px);
+    grid-template-rows: repeat(1, 50px);
+    gap: 1px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow:
+        0.3px 0.8px 2.2px rgba(0, 0, 0, 0.12),
+        0.7px 1.9px 5.3px rgba(0, 0, 0, 0.069),
+        1.4px 3.5px 10px rgba(0, 0, 0, 0.061),
+        2.5px 6.3px 17.9px rgba(0, 0, 0, 0.057),
+        4.6px 11.7px 33.4px rgba(0, 0, 0, 0.054),
+        11px 28px 80px rgba(0, 0, 0, 0.045);
+}
+
+.range {
+    height: 65px;
+    width: 245px;
+    background: #fff;
+    border-radius: 10px;
+    margin-left: 2px;
+    padding: 0 65px 0 45px;
+    box-shadow:
+        0.3px 0.8px 2.2px rgba(0, 0, 0, 0.12),
+        0.7px 1.9px 5.3px rgba(0, 0, 0, 0.069),
+        1.4px 3.5px 10px rgba(0, 0, 0, 0.061),
+        2.5px 6.3px 17.9px rgba(0, 0, 0, 0.057),
+        4.6px 11.7px 33.4px rgba(0, 0, 0, 0.054),
+        11px 28px 80px rgba(0, 0, 0, 0.045);
+
+
+}
+
+.sliderValue {
+    position: relative;
+    width: 100%;
+}
+
+.sliderValue span {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    transform: translateX(-70%) scale(0);
+    font-weight: 500;
+    top: -40px;
+    line-height: 55px;
+    z-index: 2;
+    color: #fff;
+    transform-origin: bottom;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sliderValue span.show {
+    transform: translateX(-10%) scale(1);
+}
+
+.sliderValue span:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: #4a6eff;
+    border: 3px solid #fff;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    border-bottom-left-radius: 50%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+
+.field .value {
+    position: absolute;
+    font-size: 18px;
+    color: #4a6eff;
+    font-weight: 600;
+}
+
+.field .value.left {
+    left: -40px;
+}
+
+.field .value.right {
+    right: -60px;
+}
+
+.range {
+    width: 205px;
+}
+
+.range input {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 3px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    z-index: 2222;
+}
+
+
+.range input::-moz-range-progress {
+    background: #4a6eff;
+    /*this progress background is only shown on Firefox */
+}
